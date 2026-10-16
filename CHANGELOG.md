@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.2.1
+- Neues Logo
+
 ## 0.2.0
 - Neuer Name: AppToDate (vorher Update-Radar)
 
