@@ -18,4 +18,4 @@ git add -A
 git commit -qm "Version $V"
 git tag "v$V"
 git push -q origin HEAD "v$V"
-echo "v$V gepusht – Build: https://github.com/klopsnic-cyber/update-radar/actions"
+echo "v$V gepusht – Build: https://github.com/klopsnic-cyber/apptodate/actions"

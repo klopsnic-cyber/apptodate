@@ -1,4 +1,4 @@
-# Update-Radar
+# AppToDate
 
 Prüft die Programme auf deinem Mac auf Updates – auch von Drittanbietern –, zeigt, welche davon wichtig sind, und installiert sie auf Knopfdruck.
 

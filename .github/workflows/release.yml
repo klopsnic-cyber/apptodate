@@ -37,7 +37,7 @@ jobs:
           TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD }}
         with:
           tagName: ${{ github.ref_name }}
-          releaseName: Update-Radar ${{ github.ref_name }}
+          releaseName: AppToDate ${{ github.ref_name }}
           releaseBody: Siehe CHANGELOG.md. macOS beim ersten Start - Rechtsklick > Öffnen bzw. Systemeinstellungen > Datenschutz & Sicherheit > Dennoch öffnen.
           releaseDraft: false
           prerelease: false

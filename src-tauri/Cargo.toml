@@ -1,13 +1,13 @@
 [package]
-name = "update-radar"
+name = "apptodate"
 version = "0.1.0"
-description = "Update-Radar: prüft Programme auf dem Mac und schiebt Updates an"
+description = "AppToDate: prüft Programme auf dem Mac und schiebt Updates an"
 authors = ["infralatis"]
 license = "MIT"
 edition = "2024"
 
 [lib]
-name = "update_radar_lib"
+name = "apptodate_lib"
 crate-type = ["staticlib", "cdylib", "rlib"]
 
 [build-dependencies]

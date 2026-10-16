@@ -22,7 +22,7 @@ struct App {
 }
 
 fn cache_dir(app: &AppHandle) -> PathBuf {
-    app.path().app_cache_dir().unwrap_or_else(|_| std::env::temp_dir().join("update-radar"))
+    app.path().app_cache_dir().unwrap_or_else(|_| std::env::temp_dir().join("apptodate"))
 }
 
 /// Parallel abarbeiten (Netzabfragen, Symbole) mit begrenzter Thread-Zahl.
@@ -217,7 +217,7 @@ fn askpass_script(app: &AppHandle) -> Result<PathBuf, String> {
     let p = dir.join("askpass.sh");
     let script = r#"#!/bin/sh
 /usr/bin/osascript <<'EOF'
-set r to display dialog "Update-Radar: Für dieses Update werden Administratorrechte benötigt. Bitte das Passwort deines Mac-Benutzers eingeben." default answer "" with hidden answer with title "Update-Radar" with icon caution buttons {"Abbrechen", "OK"} default button "OK"
+set r to display dialog "AppToDate: Für dieses Update werden Administratorrechte benötigt. Bitte das Passwort deines Mac-Benutzers eingeben." default answer "" with hidden answer with title "AppToDate" with icon caution buttons {"Abbrechen", "OK"} default button "OK"
 return text returned of r
 EOF
 "#;
@@ -240,7 +240,7 @@ pub fn run() {
         .manage(Arc::new(App::default()))
         .invoke_handler(tauri::generate_handler![start_scan, run_action, upgrade_all_formulae, frontend_log])
         .run(tauri::generate_context!())
-        .expect("Fehler beim Starten von Update-Radar");
+        .expect("Fehler beim Starten von AppToDate");
 }
 
 #[cfg(test)]
@@ -249,7 +249,7 @@ mod live {
     #[test]
     #[ignore]
     fn live_scan() {
-        let cache = std::env::temp_dir().join("update-radar-test");
+        let cache = std::env::temp_dir().join("apptodate-test");
         let cat = crate::catalog::load(&cache, false).unwrap();
         let casks = crate::scan::brew_casks();
         let apps = crate::scan::installed_apps();

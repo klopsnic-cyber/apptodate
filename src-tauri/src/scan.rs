@@ -301,7 +301,7 @@ pub fn appstore_lookup(bundle_id: &str) -> Option<StoreInfo> {
 fn http_get(url: &str) -> Option<String> {
     ureq::get(url)
         .timeout(Duration::from_secs(10))
-        .set("User-Agent", "Update-Radar/1.0 (macOS)")
+        .set("User-Agent", "AppToDate/1.0 (macOS)")
         .call()
         .ok()?
         .into_string()
@@ -451,7 +451,7 @@ pub fn evaluate(app: &App, cat: &Catalog, brew_casks: &HashMap<String, String>) 
                     args: vec!["install".into(), "--cask".into(), "--force".into(), c.token.clone()],
                     url: None,
                     confirm: Some(format!(
-                        "Homebrew lädt {} {latest} vom Hersteller und ersetzt die installierte App. Einstellungen und Daten bleiben erhalten; künftige Updates laufen dann ebenfalls über Update-Radar.{quit}",
+                        "Homebrew lädt {} {latest} vom Hersteller und ersetzt die installierte App. Einstellungen und Daten bleiben erhalten; künftige Updates laufen dann ebenfalls über AppToDate.{quit}",
                         app.name
                     )),
                 });

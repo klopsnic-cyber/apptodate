@@ -207,7 +207,7 @@
   <header data-tauri-drag-region>
     <div class="brand" data-tauri-drag-region>
       <img class="logo" src="/logo.png" alt="" />
-      <b data-tauri-drag-region>Update-Radar</b>
+      <b data-tauri-drag-region>AppToDate</b>
       {#if version}<small class="muted">{version}</small>{/if}
     </div>
     <div class="head-r">
@@ -220,7 +220,7 @@
 
   {#if appUpdate}
     <div class="banner">
-      <Download size={15} /> Update-Radar {appUpdate.version} ist da.
+      <Download size={15} /> AppToDate {appUpdate.version} ist da.
       <button class="primary small" disabled={appUpdating} onclick={installAppUpdate}>{appUpdating ? "Wird installiert …" : "Jetzt aktualisieren"}</button>
       <button class="ghost small" onclick={() => (appUpdate = null)} aria-label="Später"><X size={14} /></button>
     </div>
@@ -302,7 +302,7 @@
         </div>
       {/each}
       {#if tab === "unknown" && shown.length}
-        <p class="foot muted">Für diese Programme kennt Update-Radar keine verlässliche Update-Quelle (Eigenentwicklungen, Spiele, Hersteller ohne öffentlichen Katalog). Bitte bei Bedarf beim Hersteller prüfen.</p>
+        <p class="foot muted">Für diese Programme kennt AppToDate keine verlässliche Update-Quelle (Eigenentwicklungen, Spiele, Hersteller ohne öffentlichen Katalog). Bitte bei Bedarf beim Hersteller prüfen.</p>
       {/if}
     </section>
   </main>

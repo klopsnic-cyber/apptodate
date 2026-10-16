@@ -1,4 +1,4 @@
-# Update-Radar
+# AppToDate
 
 Prüft die Programme auf dem Mac auf Updates, stuft sie nach Dringlichkeit ein und stößt die Aktualisierung an.
 Tauri 2 + Svelte 5 + Rust. Gleiches Muster wie `~/Cowork/onlyfiles` (Updater, release.sh, CI).
